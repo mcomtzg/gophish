@@ -29,6 +29,7 @@ echo --------------------------- Configuration -----------------------------
 echo The Server IP is $var this will now be changed in the config file.
 #sed -i 's!127.0.0.1!0.0.0.0!g' ~/GoWork/src/github.com/rfdevere/gophish/config.json
 sed -i 's/127.0.0.1/'$var'/gi' ~/GoWork/src/github.com/rfdevere/gophish/config.json
+echo 
 
 #Clearing ports 80/3333 incase anything was running... 
 echo ---------------------- Clearing 80,3333/TCP --------------------------
@@ -38,8 +39,8 @@ echo
 
 #Installing PostFix
 echo --------------------- Installing Email Client -----------------------------
-echo 'Select Internet Site from the following menu'
-sleep 3
+export DEBIAN_FRONTEND=noninteractive
+apt-get install -y postfix
 apt -y install postfix
 echo
 
