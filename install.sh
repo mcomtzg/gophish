@@ -64,7 +64,7 @@ sleep 2
 echo 'The Following Rules Have Been Added:'
 ufw show added
 echo 'Activating Firewall...'
-ufw enable
+echo "y" | sudo ufw enable
 echo 'Curent Firewall Status:'
 ufw status
 echo 
