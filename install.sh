@@ -40,7 +40,7 @@ echo
 echo --------------------- Installing Email Client -----------------------------
 echo 'Select Internet Site from the following menu'
 sleep 3
-apt install postfix
+apt -y install postfix
 echo
 
 #Securing GoPhish
