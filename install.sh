@@ -56,15 +56,15 @@ echo -------------------- Firewall Configuration ------------------------------
 echo 'Curent Firewall Status:'
 ufw status
 echo
-echo Your IP Address is assumed to be '$var1'
+echo Your IP Address is assumed to be "($var1)"
 echo 'Adding Firewall Rules...'
-iptables -A INPUT -p tcp --dport 3333 -s '$var1' -j ACCEPT
+iptables -A INPUT -p tcp --dport 3333 -s "($var1)" -j ACCEPT
 iptables -A INPUT -p tcp --dport 3333 -j DROP
 sleep 2
 echo 'The Following Rules Have Been Added:'
 ufw show added
 echo 'Activating Firewall...'
-echo "y" | sudo ufw enable
+sudo ufw --force enable
 echo 'Curent Firewall Status:'
 ufw status
 echo 
