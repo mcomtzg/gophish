@@ -3,10 +3,8 @@
 
 #Get the servers externally facing IP and store as var & Grab the connected SSH client for ufw ruleset
 var="$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1')"
-var1="who am i --ips|awk '{print $5}'"
+var1="$(who am i --ips|awk '{print $5}')"
 
-
-#Install GoLang and skip prompts & Set GoPath on system
 echo -------------------------- Installing GoLang --------------------------
 echo
 apt-get -y install golang-go
