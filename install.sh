@@ -4,6 +4,9 @@
 #Get the servers externally facing IP and store as var & Grab the connected SSH client for ufw ruleset
 var="$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1')"
 
+#Update packages
+apt-get update
+
 #Install git if not already on server for go get command
 apt-get -y install git 
 
