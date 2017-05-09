@@ -25,7 +25,7 @@ echo
 #Move into the project & Build
 echo ------------------------- Building GoPhish ---------------------------
 echo
-cd ~/GoWork/src/github.com/rfdevere/gophish
+cd $HOME/GoWork/src/github.com/rfdevere/gophish
 go build
 echo Done...
 echo
