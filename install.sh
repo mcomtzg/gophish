@@ -21,14 +21,14 @@ echo
 #Go Get GoPhish From rfdevere build
 echo ------------------------- Getting GoPhish ----------------------------
 echo 
-go get github.com/rfdevere/gophish
+go get github.com/gophish/gophish
 echo Done...
 echo 
 
 #Move into the project & Build
 echo ------------------------- Building GoPhish ---------------------------
 echo
-cd $HOME/GoWork/src/github.com/rfdevere/gophish
+cd $HOME/GoWork/src/github.com/gophish/gophish
 go build
 echo Done...
 echo
@@ -38,7 +38,7 @@ echo --------------------------- Configuration -----------------------------
 echo
 echo The Server IP is $var this will now be changed in the config file.
 #sed -i 's!127.0.0.1!0.0.0.0!g' ~/GoWork/src/github.com/rfdevere/gophish/config.json
-sed -i 's/127.0.0.1/'$var'/gi' ~/GoWork/src/github.com/rfdevere/gophish/config.json
+sed -i 's/127.0.0.1/'$var'/gi' ~/GoWork/src/github.com/gophish/gophish/config.json
 echo 
 
 #Clearing ports 80/3333 incase anything was running... 
